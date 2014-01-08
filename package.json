@@ -1,0 +1,52 @@
+{
+  "private": true,
+  "url": "",
+  "production_url": "http://www.whtjjw.com",
+  "name": "天健北斗",
+  "version": "0.0.0",
+  "keywords": [
+    "武汉卫星定位",
+    "北斗系统",
+    "GPS系统",
+    "车载录像",
+    "3G视频",
+    "天健军卫车辆监控黑匣子",
+    "GIS地理信息跟踪",
+    "混凝土车",
+    "物流车",
+    "客运车",
+    "渣土车",
+    "配送车",
+    "危险品运输车",
+    "校车",
+    "拖挂车",
+    "智能交通"
+  ],
+  "description": "天健北斗科技有限公司投身于卫星定位行业，有着强大的技术背景和非常丰富的行业经验。天健北斗系列卫星定位定位系统、卫星定位调度系统、卫星定位监控系统、卫星定位跟踪系统、GIS系统项目等地设有办事机构，在全国多个地级城市设有办事处。天健北斗计划大力增加各方投入，努力打造卫星定位、GIS行业领先品牌。",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "assemble": "~0.4.32",
+    "handlebars-helper-prettify": "~0.2.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-open": "~0.2.2",
+    "assemble-less": "~0.5.3",
+    "grunt-rev": "~0.1.0",
+    "grunt-md5": "~0.1.11",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "assemble-permalink": "0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/8html/whtjjw.com.git"
+  },
+  "author": "Cai Guanhao (Choi Goon-ho) <caiguanhao@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/8html/whtjjw.com/issues"
+  }
+}

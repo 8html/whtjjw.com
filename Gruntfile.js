@@ -90,6 +90,7 @@ module.exports = function(grunt) {
         pkg: '<%= pkg %>',
         plugins: [ 'assemble-permalink' ],
         helpers: [ 'handlebars-helper-prettify', 'helpers/*.js' ],
+        partials: [ 'partials/*.hbs' ],
         layoutdir: 'layouts',
         layout: 'default.hbs',
         production: false

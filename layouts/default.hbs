@@ -21,17 +21,29 @@
       <div id="logo"><a class="png" href="{{ pkg.url }}/" title="佛山市顺德区捷通数码科技有限公司">佛山市顺德区捷通数码科技有限公司</a></div>
       <ul id="menu">
         <li class="menu_start"></li>
-        <li class="menu_item"><a class="menu_item_current" href="{{ pkg.url }}/">首页</a></li>
+        <li class="menu_item">
+          <a href="{{ pkg.url }}/">首页</a>
+        </li>
         <li class="menu_sep"></li>
-        <li class="menu_item"><a href="{{ pkg.url }}/news/" data-id="1" title="GPS新闻中心">GPS新闻中心</a></li>
+        <li class="menu_item">
+          <a href="{{ pkg.url }}/news/" data-id="1" title="GPS新闻中心">GPS新闻中心</a>
+        </li>
         <li class="menu_sep"></li>
-        <li class="menu_item"><a href="{{ pkg.url }}/gps/" data-id="4" title="GPS产品展示">GPS产品展示</a></li>
+        <li class="menu_item">
+          <a href="{{ pkg.url }}/gps/" data-id="4" title="GPS产品展示">GPS产品展示</a>
+        </li>
         <li class="menu_sep"></li>
-        <li class="menu_item"><a href="{{ pkg.url }}/solutions/" title="GPS解决方案">GPS解决方案</a></li>
+        <li class="menu_item">
+          <a href="{{ pkg.url }}/solutions/" title="GPS解决方案">GPS解决方案</a>
+        </li>
         <li class="menu_sep"></li>
-        <li class="menu_item"><a href="{{ pkg.url }}/download/" data-id="9" title="GPS软件下载">GPS软件下载</a></li>
+        <li class="menu_item">
+          <a href="{{ pkg.url }}/download/" data-id="9" title="GPS软件下载">GPS软件下载</a>
+        </li>
         <li class="menu_sep"></li>
-        <li class="menu_item"><a href="{{ pkg.url }}/contact/" data-id="12">联系我们</a></li>
+        <li class="menu_item">
+          <a{{#is nav 'contact'}} class="menu_item_current"{{/is}} href="{{ pkg.url }}/contact/" data-id="12">联系我们</a>
+        </li>
         <li class="menu_end"></li>
       </ul>
       <ul id="menu_sub_1" class="submenu hidden">

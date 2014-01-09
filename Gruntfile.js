@@ -105,7 +105,8 @@ module.exports = function(grunt) {
         options: {
           layout: '../posts/job_details.hbs',
           pages: grunt.file.readYAML('posts/job.yml'),
-          belongs_to: 'job'
+          belongs_to: 'job',
+          nav: 'contact'
         },
         files: { 'site/': [] }
       }

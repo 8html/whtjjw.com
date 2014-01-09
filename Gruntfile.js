@@ -93,12 +93,21 @@ module.exports = function(grunt) {
         partials: [ 'partials/*.hbs' ],
         layoutdir: 'layouts',
         layout: 'default.hbs',
-        production: false
+        production: false,
+        data: [ 'posts/*.yml' ]
       },
-      site: {
+      static: {
         files: {
-          'site/': [ '**/*.hbs', '!node_modules/**', '!layouts/**' ]
+          'site/': [ '*.hbs', 'pages/*.hbs' ]
         }
+      },
+      job: {
+        options: {
+          layout: '../posts/job_details.hbs',
+          pages: grunt.file.readYAML('posts/job.yml'),
+          belongs_to: 'job'
+        },
+        files: { 'site/': [] }
       }
     },
     watch: {
@@ -114,7 +123,7 @@ module.exports = function(grunt) {
         tasks: [ 'clean:js', 'uglify', 'concat' ]
       },
       templates: {
-        files: [ '**/*.hbs', '**/*.yml' ],
+        files: [ '**/*.hbs', '**/*.yml', 'helpers/*.js' ],
         tasks: [ 'assemble' ]
       },
       images: {

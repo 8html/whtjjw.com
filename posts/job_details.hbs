@@ -1,0 +1,28 @@
+---
+layout: default.hbs
+---
+<div class="main">
+<div class="maincontainer png fixed_width pos_center">
+  <div class="twocol">
+  <div class="twocol_l">
+{{>about}}
+  </div>
+  <div class="twocol_r">
+    <div class="context png">
+      <div class="article">
+        <h2 class="arc_title">{{title}}</h2>
+        {{#if date}}
+          <h5 class="arc_info">发表时间:{{formatDate date "%Y-%m-%d"}} </h5>
+        {{/if}}
+        <div class="arc_content">
+          {{>body}}
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  </div>
+</div>
+</div>

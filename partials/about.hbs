@@ -4,9 +4,9 @@
     <em>ABOUT US</em>
   </div>
   <ul class="sidemenu_body png">
-    <li><a{{#is permalink "/about/"}} class="sidemenu_current png"{{/is}} href="/about/">关于我们</a></li>
-    <li><a{{#is permalink "/job/"}} class="sidemenu_current png"{{/is}} href="/job/">职位招聘</a></li>
-    <li><a{{#is permalink "/contact/"}} class="sidemenu_current png"{{/is}} href="/contact/">联系我们</a></li>
+    <li><a{{#startsWith permalink "/about/"}} class="sidemenu_current png"{{/startsWith}} href="/about/">关于我们</a></li>
+    <li><a{{#is belongs_to "job"}} class="sidemenu_current png"{{/is}} href="/job/">职位招聘</a></li>
+    <li><a{{#startsWith permalink "/contact/"}} class="sidemenu_current png"{{/startsWith}} href="/contact/">联系我们</a></li>
   </ul>
   <div class="sidemenu_foot png"></div>
 </div>

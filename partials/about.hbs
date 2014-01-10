@@ -1,4 +1,14 @@
 <div class="sidemenu">
+{{#is nav "solution"}}
+  <div class="sidemenu_head png">
+    <h2>GPS解决方案</h2>
+    <em>GPS SOLUTIONS</em>
+  </div>
+  <ul class="sidemenu_body png">
+    <li><a class="sidemenu_current png" href="/solution/">车辆管理方案</a></li>
+  </ul>
+  <div class="sidemenu_foot png"></div>
+{{else}}
 {{#is nav "download"}}
   <div class="sidemenu_head png">
     <h2>GPS软件下载</h2>
@@ -23,6 +33,7 @@
     <li><a{{#startsWith permalink "/contact/"}} class="sidemenu_current png"{{/startsWith}} href="/contact/">联系我们</a></li>
   </ul>
   <div class="sidemenu_foot png"></div>
+{{/is}}
 {{/is}}
 </div>
 <div class="sidebox marginTop10px">

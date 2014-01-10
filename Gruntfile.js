@@ -102,9 +102,17 @@ module.exports = function(grunt) {
           'site/': [ '*.hbs', 'pages/*.hbs' ]
         }
       },
+      solution: {
+        options: {
+          layout: 'details.hbs',
+          pages: grunt.file.readYAML('posts/solution.yml'),
+          nav: 'solution'
+        },
+        files: { 'site/': [] }
+      },
       download: {
         options: {
-          layout: '../posts/download_details.hbs',
+          layout: 'details.hbs',
           pages: grunt.file.readYAML('posts/download.yml'),
           nav: 'download'
         },
@@ -112,7 +120,7 @@ module.exports = function(grunt) {
       },
       job: {
         options: {
-          layout: '../posts/job_details.hbs',
+          layout: 'details.hbs',
           pages: grunt.file.readYAML('posts/job.yml'),
           nav: 'contact'
         },

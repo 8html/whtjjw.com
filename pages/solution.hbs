@@ -1,0 +1,38 @@
+---
+permalink: /solution/
+nav: solution
+---
+<div class="main">
+<div class="maincontainer png fixed_width pos_center">
+  <div class="twocol">
+  <div class="twocol_l">
+{{>about}}
+  </div>
+  <div class="twocol_r">
+    <div class="context png">
+      <table class="artlsttbl">
+        <thead>
+          <tr>
+            <th class="alth1">序号</th>
+            <th class="alth2">标题</th>
+            <th class="alth3">发表时间</th>
+            <th class="alth4">点击</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#eachProperty solution}}
+          <tr>
+            <td>{{no}}</td>
+            <td class="alttitle"><a href="{{value.filename}}">{{value.data.title}}</a></td>
+            <td>{{#if value.data.date}}{{formatDate value.data.date "%Y-%m-%d"}}{{else}}-{{/if}}</td>
+            <td>{{randomNumber 500 1000}}</td>
+          </tr>
+          {{/eachProperty}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="clear"></div>
+  </div>
+</div>
+</div>

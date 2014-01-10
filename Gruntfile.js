@@ -106,7 +106,6 @@ module.exports = function(grunt) {
         options: {
           layout: '../posts/download_details.hbs',
           pages: grunt.file.readYAML('posts/download.yml'),
-          belongs_to: 'download',
           nav: 'download'
         },
         files: { 'site/': [] }
@@ -115,7 +114,6 @@ module.exports = function(grunt) {
         options: {
           layout: '../posts/job_details.hbs',
           pages: grunt.file.readYAML('posts/job.yml'),
-          belongs_to: 'job',
           nav: 'contact'
         },
         files: { 'site/': [] }

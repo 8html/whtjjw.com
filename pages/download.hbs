@@ -1,7 +1,6 @@
 ---
 permalink: "<%= config.download.types.map(function(i){ return '/download/' + (i ? i + '/' : ''); }).join('\\n') %>"
 nav: download
-belongs_to: download
 type: <%= permalink.replace(/^\/download\/|\/$/g, '') %>
 ---
 <div class="main">

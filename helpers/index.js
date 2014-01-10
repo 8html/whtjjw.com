@@ -27,4 +27,12 @@ module.exports.register = function(Handlebars, options) {
     counter[index] += 1;
     return counter[index];
   });
+
+  Handlebars.registerHelper('isMarkdownFile', function(filename, content) {
+    if (filename && /\.md$/i.test(filename)) {
+      return content.fn(this);
+    } else {
+      return content.inverse(this);
+    }
+  });
 };

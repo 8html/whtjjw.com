@@ -1,0 +1,44 @@
+---
+layout: default.hbs
+permalink: "<%= config.news.types.map(function(i){ return '/news/' + (i ? i + '/' : ''); }).join('\\n') %>"
+type: <%= permalink.replace(/^\/news\/|\/$/g, '') %>
+counter: [ 0 ]
+---
+<div class="main">
+<div class="maincontainer png fixed_width pos_center">
+  <div class="twocol">
+  <div class="twocol_l">
+{{>about}}
+  </div>
+  <div class="twocol_r">
+    <div class="context png">
+      <table class="artlsttbl">
+        <thead>
+          <tr>
+            <th class="alth1">序号</th>
+            <th class="alth2">标题</th>
+            <th class="alth3">发表时间</th>
+            <th class="alth4">点击</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each pages}}
+          {{#isMarkdownFile src}}
+          {{#contains ../data.type ../../type}}
+          <tr>
+            <td>{{selfIncrementCounter ../../../counter 0}}</td>
+            <td class="alttitle"><a href="{{../data.permalink}}">{{../data.title}}</a></td>
+            <td>{{#if ../data.date}}{{formatDate ../data.date "%Y-%m-%d"}}{{else}}-{{/if}}</td>
+            <td>{{randomNumber 500 1000}}</td>
+          </tr>
+          {{/contains}}
+          {{/isMarkdownFile}}
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="clear"></div>
+  </div>
+</div>
+</div>

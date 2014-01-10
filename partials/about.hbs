@@ -1,4 +1,18 @@
 <div class="sidemenu">
+{{#is nav "news"}}
+  <div class="sidemenu_head png">
+    <h2>GPS新闻中心</h2>
+    <em>GPS NEWS</em>
+  </div>
+  <ul class="sidemenu_body png">
+    {{#eachIndex config.news.types}}
+      {{#if item}}
+        <li><a{{#is ../../type item}} class="sidemenu_current png"{{/is}} href="/news/{{item}}/">{{get ../../config.news.TYPES index}}</a></li>
+      {{/if}}
+    {{/eachIndex}}
+  </ul>
+  <div class="sidemenu_foot png"></div>
+{{else}}
 {{#is nav "product"}}
   <div class="sidemenu_head png">
     <h2>GPS产品展示</h2>
@@ -47,6 +61,7 @@
     <li><a{{#startsWith permalink "/contact/"}} class="sidemenu_current png"{{/startsWith}} href="/contact/">联系我们</a></li>
   </ul>
   <div class="sidemenu_foot png"></div>
+{{/is}}
 {{/is}}
 {{/is}}
 {{/is}}

@@ -102,6 +102,14 @@ module.exports = function(grunt) {
           'site/': [ '*.hbs', 'pages/*.hbs' ]
         }
       },
+      news: {
+        options: {
+          layout: 'details.hbs',
+          nav: 'news',
+          permalink: '/news/{{ basename }}.html'
+        },
+        files: { 'site/': [ 'posts/news/*.hbs', 'posts/news/**/*.md' ] }
+      },
       product: {
         options: {
           layout: 'details.hbs',
@@ -148,7 +156,7 @@ module.exports = function(grunt) {
         tasks: [ 'clean:js', 'uglify', 'concat' ]
       },
       templates: {
-        files: [ '**/*.hbs', '**/*.yml', 'helpers/*.js' ],
+        files: [ '**/*.hbs', '**/*.yml', '**/*.md', 'helpers/*.js' ],
         tasks: [ 'assemble' ]
       },
       images: {

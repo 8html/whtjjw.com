@@ -1,3 +1,7 @@
+news:
+  types: [ '', 'industry', 'enterprise' ]
+  TYPES: [ '', 'GPS行业新闻', 'GPS企业新闻' ]
+
 product:
   types: [ '', 'video', 'gps' ]
   TYPES: [ '', '视频监控产品', 'GPS监控产品' ]

@@ -156,9 +156,36 @@ module.exports = function(grunt) {
         files: [ 'assets/js/*.js' ],
         tasks: [ 'clean:js', 'uglify', 'concat' ]
       },
-      templates: {
-        files: [ '**/*.hbs', '**/*.yml', '**/*.md', 'helpers/*.js' ],
+      grunt: {
+        files: [ 'Gruntfile.js' ]
+      },
+      reassemble: {
+        files: [ 'helpers/*', '*.yml', 'layouts/*', 'partials/*' ],
         tasks: [ 'assemble' ]
+      },
+      index: {
+        files: [ '*.hbs', 'pages/*.hbs' ],
+        tasks: [ 'assemble:static' ]
+      },
+      news: {
+        files: [ 'posts/news/**/*' ],
+        tasks: [ 'assemble:news' ]
+      },
+      download: {
+        files: [ 'posts/download.yml' ],
+        tasks: [ 'assemble:download' ]
+      },
+      product: {
+        files: [ 'posts/product.yml' ],
+        tasks: [ 'assemble:product' ]
+      },
+      job: {
+        files: [ 'posts/job.yml' ],
+        tasks: [ 'assemble:job' ]
+      },
+      solution: {
+        files: [ 'posts/solution.yml' ],
+        tasks: [ 'assemble:solution' ]
       },
       images: {
         files: [ 'assets/images/**' ],

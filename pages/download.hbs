@@ -2,6 +2,7 @@
 permalink: "<%= config.download.types.map(function(i){ return '/download/' + (i ? i + '/' : ''); }).join('\\n') %>"
 nav: download
 type: <%= permalink.replace(/^\/download\/|\/$/g, '') %>
+counter: [ 0 ]
 ---
 <div class="main">
 <div class="maincontainer png fixed_width pos_center">
@@ -24,7 +25,7 @@ type: <%= permalink.replace(/^\/download\/|\/$/g, '') %>
           {{#eachProperty download}}
           {{#contains value.data.type ../type}}
           <tr>
-            <td>{{no}}</td>
+            <td>{{selfIncrementCounter ../../counter 0}}</td>
             <td class="alttitle"><a href="{{value.filename}}">{{value.data.title}}</a></td>
             <td>{{#if value.data.date}}{{formatDate value.data.date "%Y-%m-%d"}}{{else}}-{{/if}}</td>
             <td>{{randomNumber 500 1000}}</td>

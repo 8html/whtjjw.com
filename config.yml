@@ -1,3 +1,7 @@
+product:
+  types: [ '', 'video', 'gps' ]
+  TYPES: [ '', '视频监控产品', 'GPS监控产品' ]
+
 download:
   types: [ '', 'client', 'pro' ]
   TYPES: [ '', 'GPS客户端', 'GPS专业版' ]

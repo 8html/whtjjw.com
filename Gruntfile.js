@@ -102,6 +102,14 @@ module.exports = function(grunt) {
           'site/': [ '*.hbs', 'pages/*.hbs' ]
         }
       },
+      product: {
+        options: {
+          layout: 'details.hbs',
+          pages: grunt.file.readYAML('posts/product.yml'),
+          nav: 'product'
+        },
+        files: { 'site/': [] }
+      },
       solution: {
         options: {
           layout: 'details.hbs',

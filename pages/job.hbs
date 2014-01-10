@@ -1,6 +1,7 @@
 ---
 permalink: /job/
 nav: contact
+counter: [ 0 ]
 ---
 <div class="main">
 <div class="maincontainer png fixed_width pos_center">
@@ -22,7 +23,7 @@ nav: contact
         <tbody>
           {{#eachProperty job}}
           <tr>
-            <td>{{no}}</td>
+            <td>{{selfIncrementCounter ../../counter 0}}</td>
             <td class="alttitle"><a href="{{value.filename}}">{{value.data.title}}</a></td>
             <td>{{#if value.data.date}}{{formatDate value.data.date "%Y-%m-%d"}}{{else}}-{{/if}}</td>
             <td>{{randomNumber 500 1000}}</td>

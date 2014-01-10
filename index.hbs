@@ -20,12 +20,30 @@ swfobject.embedSWF("/assets/images/wave.swf","animwave","200","200","9.0.0","/as
       </ul>
       <div class="tabpage" id="tab-n1">
         <ul class="newstablist">
-          <li></li>
+          {{#each posts_list.news}}
+          {{#is type "industry"}}
+          <li>
+            <em>{{formatDate date '%m-%d'}}</em>
+            <a href="{{permalink}}" title="{{title}}">
+              <em class="nbul new1"></em>{{title}}
+            </a>
+          </li>
+          {{/is}}
+          {{/each}}
         </ul>
       </div>
       <div class="tabpage" id="tab-n2">
         <ul class="newstablist">
-          <li></li>
+          {{#each posts_list.news}}
+          {{#is type "enterprise"}}
+          <li>
+            <em>{{formatDate date '%m-%d'}}</em>
+            <a href="{{permalink}}" title="{{title}}">
+              <em class="nbul new1"></em>{{title}}
+            </a>
+          </li>
+          {{/is}}
+          {{/each}}
         </ul>
       </div>
 <script>

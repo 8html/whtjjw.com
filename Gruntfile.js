@@ -88,8 +88,8 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         pkg: '<%= pkg %>',
-        plugins: [ 'assemble-permalink' ],
-        helpers: [ 'handlebars-helper-prettify', 'helpers/*.js' ],
+        plugins: [ 'assemble-permalink', './helpers/posts_list.js' ],
+        helpers: [ 'handlebars-helper-prettify', 'helpers/index.js' ],
         partials: [ 'partials/*.hbs' ],
         layoutdir: 'layouts',
         layout: 'default.hbs',
@@ -97,16 +97,12 @@ module.exports = function(grunt) {
         data: [ 'posts/*.yml' ],
         config: grunt.file.readYAML('config.yml')
       },
-      static: {
-        files: {
-          'site/': [ '*.hbs', 'pages/*.hbs' ]
-        }
-      },
       news: {
         options: {
           layout: 'details.hbs',
           nav: 'news',
-          permalink: '/news/{{ basename }}.html'
+          permalink: '/news/{{ basename }}.html',
+          export_posts_list_as: 'news'
         },
         files: { 'site/': [ 'posts/news/*.hbs', 'posts/news/**/*.md' ] }
       },
@@ -141,6 +137,11 @@ module.exports = function(grunt) {
           nav: 'contact'
         },
         files: { 'site/': [] }
+      },
+      static: {
+        files: {
+          'site/': [ '*.hbs', 'pages/*.hbs' ]
+        }
       }
     },
     watch: {

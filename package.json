@@ -2,7 +2,8 @@
   "private": true,
   "url": "",
   "production_url": "http://www.whtjjw.com",
-  "name": "天健北斗",
+  "name": "whtjjw.com",
+  "NAME": "天健北斗",
   "version": "0.0.0",
   "keywords": [
     "武汉卫星定位",
@@ -38,7 +39,7 @@
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-copy": "~0.4.1",
-    "assemble-permalink": "0.0.1"
+    "assemble-permalink": "~0.1.0"
   },
   "repository": {
     "type": "git",

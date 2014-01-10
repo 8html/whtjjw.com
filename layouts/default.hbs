@@ -7,7 +7,7 @@
 {{#prettify}}
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <title>{{#if title}}{{ title }}{{else}}{{ pkg.name }}{{/if}}-广州GPS,合肥GPS,广东GPS,佛山GPS,顺德GPS</title>
+  <title>{{#if title}}{{ title }}{{else}}{{ pkg.NAME }}{{/if}}-广州GPS,合肥GPS,广东GPS,佛山GPS,顺德GPS</title>
   <meta name="viewport" content="width=1024" />
   <meta name="description" content="{{#if description}}{{ description }}{{else}}{{ pkg.description }}{{/if}}" />
   <meta name="keywords" content="{{#if keywords}}{{ keywords }}{{else}}{{join pkg.keywords ', '}}{{/if}}" />
@@ -38,7 +38,7 @@
         </li>
         <li class="menu_sep"></li>
         <li class="menu_item">
-          <a href="{{ pkg.url }}/download/" data-id="9" title="GPS软件下载">GPS软件下载</a>
+          <a{{#is nav 'download'}} class="menu_item_current"{{/is}} href="{{ pkg.url }}/download/" data-id="9" title="GPS软件下载">GPS软件下载</a>
         </li>
         <li class="menu_sep"></li>
         <li class="menu_item">
@@ -64,7 +64,7 @@
         <li class="menu_sub_start"></li>
         <li class="menu_sub_item"><a href="{{ pkg.url }}/download/client/" title="GPS网络版">GPS网络版</a></li>
         <li class="menu_sub_sep"></li>
-        <li class="menu_sub_item"><a href="{{ pkg.url }}/download/android/" title="GPS专业版">GPS专业版</a></li>
+        <li class="menu_sub_item"><a href="{{ pkg.url }}/download/pro/" title="GPS专业版">GPS专业版</a></li>
         <li class="menu_sub_end"></li>
       </ul>
       <ul id="menu_sub_12" class="submenu hidden">
@@ -114,6 +114,7 @@
         English Version
       </div>
     </div>
+    {{#if production}}
     <div class="zxkf">
       <div class="zxkfbtn"></div>
       <div class="zxkfpanel">
@@ -157,6 +158,7 @@
     var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
     document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F117a0fdd12db1d47f8e3164769fa1bcd' type='text/javascript'%3E%3C/script%3E"));
     </script>
+    {{/if}}
   </div>
 </body>
 {{/prettify}}

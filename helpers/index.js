@@ -36,4 +36,8 @@ module.exports.register = function(Handlebars, options) {
       return content.inverse(this);
     }
   });
+
+  Handlebars.registerHelper('get', function(object, index) {
+    return object[index];
+  });
 };

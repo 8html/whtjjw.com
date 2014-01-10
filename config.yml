@@ -1,0 +1,3 @@
+download:
+  types: [ '', 'client', 'pro' ]
+  TYPES: [ '', 'GPS客户端', 'GPS专业版' ]

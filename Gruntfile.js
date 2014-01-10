@@ -94,12 +94,22 @@ module.exports = function(grunt) {
         layoutdir: 'layouts',
         layout: 'default.hbs',
         production: false,
-        data: [ 'posts/*.yml' ]
+        data: [ 'posts/*.yml' ],
+        config: grunt.file.readYAML('config.yml')
       },
       static: {
         files: {
           'site/': [ '*.hbs', 'pages/*.hbs' ]
         }
+      },
+      download: {
+        options: {
+          layout: '../posts/download_details.hbs',
+          pages: grunt.file.readYAML('posts/download.yml'),
+          belongs_to: 'download',
+          nav: 'download'
+        },
+        files: { 'site/': [] }
       },
       job: {
         options: {

@@ -1,4 +1,18 @@
 <div class="sidemenu">
+{{#is nav "download"}}
+  <div class="sidemenu_head png">
+    <h2>GPS软件下载</h2>
+    <em>GPS DOWNLOADS</em>
+  </div>
+  <ul class="sidemenu_body png">
+    {{#eachIndex config.download.types}}
+      {{#if item}}
+        <li><a{{#is ../../type item}} class="sidemenu_current png"{{/is}} href="/download/{{item}}/">{{get ../../config.download.TYPES index}}</a></li>
+      {{/if}}
+    {{/eachIndex}}
+  </ul>
+  <div class="sidemenu_foot png"></div>
+{{else}}
   <div class="sidemenu_head png">
     <h2>关于我们</h2>
     <em>ABOUT US</em>
@@ -9,6 +23,7 @@
     <li><a{{#startsWith permalink "/contact/"}} class="sidemenu_current png"{{/startsWith}} href="/contact/">联系我们</a></li>
   </ul>
   <div class="sidemenu_foot png"></div>
+{{/is}}
 </div>
 <div class="sidebox marginTop10px">
   <div class="sidebox_head png">联系我们</div>

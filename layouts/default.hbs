@@ -22,7 +22,7 @@
       <ul id="menu">
         <li class="menu_start"></li>
         <li class="menu_item">
-          <a href="{{ pkg.url }}/">首页</a>
+          <a{{#is permalink '/'}} class="menu_item_current"{{/is}} href="{{ pkg.url }}/">首页</a>
         </li>
         <li class="menu_sep"></li>
         <li class="menu_item">
@@ -42,7 +42,7 @@
         </li>
         <li class="menu_sep"></li>
         <li class="menu_item">
-          <a{{#is nav 'contact'}} class="menu_item_current"{{/is}} href="{{ pkg.url }}/contact/" data-id="12">联系我们</a>
+          <a{{#inArray '["contact","about","job"]' nav}} class="menu_item_current"{{/inArray}} href="{{ pkg.url }}/contact/" data-id="12">联系我们</a>
         </li>
         <li class="menu_end"></li>
       </ul>
@@ -55,9 +55,9 @@
       </ul>
       <ul id="menu_sub_4" class="submenu hidden">
         <li class="menu_sub_start"></li>
-        <li class="menu_sub_item"><a href="{{ pkg.url }}/gps/video/" title="视频监控产品">视频监控产品</a></li>
+        <li class="menu_sub_item"><a href="{{ pkg.url }}/product/video/" title="视频监控产品">视频监控产品</a></li>
         <li class="menu_sub_sep"></li>
-        <li class="menu_sub_item"><a href="{{ pkg.url }}/gps/extend/" title="GPS监控产品">GPS监控产品</a></li>
+        <li class="menu_sub_item"><a href="{{ pkg.url }}/product/gps/" title="GPS监控产品">GPS监控产品</a></li>
         <li class="menu_sub_end"></li>
       </ul>
       <ul id="menu_sub_9" class="submenu hidden">

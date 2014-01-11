@@ -134,7 +134,7 @@ module.exports = function(grunt) {
         options: {
           layout: 'details.hbs',
           pages: grunt.file.readYAML('posts/job.yml'),
-          nav: 'contact'
+          nav: 'job'
         },
         files: { 'site/': [] }
       },

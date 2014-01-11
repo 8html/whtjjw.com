@@ -19,8 +19,19 @@ module.exports.register = function(Handlebars, options) {
     }
   });
 
-  Handlebars.registerHelper('get', function(object, index) {
-    return object[index];
+  Handlebars.registerHelper('get', function(object/* ... */) {
+    for (var i = 1; i < arguments.length - 1; i++) {
+      if (object.hasOwnProperty(arguments[i])) {
+        object = object[arguments[i]];
+      } else {
+        return 'null';
+      }
+    }
+    if (typeof(object) === 'string') {
+      return object;
+    } else {
+      return JSON.stringify(object);
+    }
   });
 
   Handlebars.registerHelper('selfIncrementCounter', function(counter, index) {
@@ -35,4 +46,15 @@ module.exports.register = function(Handlebars, options) {
       return content.inverse(this);
     }
   });
+
+  Handlebars.registerHelper('inArray', function(array, value, content) {
+    if (typeof(array) === 'string') {
+      array = JSON.parse(array);
+    }
+    if (array.indexOf(value) >= 0) {
+      return content.fn(this);
+    } else {
+      return content.inverse(this);
+    }
+  })
 };

@@ -1,11 +1,37 @@
 news:
   types: [ '', 'industry', 'enterprise' ]
   TYPES: [ '', 'GPS行业新闻', 'GPS企业新闻' ]
+  bread: '/news/'
+  BREAD: '新闻中心'
 
 product:
   types: [ '', 'video', 'gps' ]
   TYPES: [ '', '视频监控产品', 'GPS监控产品' ]
+  bread: '/product/'
+  BREAD: '产品展示'
+
+solution:
+  bread: '/solution/'
+  BREAD: '解决方案'
 
 download:
   types: [ '', 'client', 'pro' ]
   TYPES: [ '', 'GPS客户端', 'GPS专业版' ]
+  bread: '/download/'
+  BREAD: '软件下载'
+
+job:
+  bread: '/job/'
+  BREAD: '职位招聘'
+
+about:
+  bread: '/about/'
+  BREAD: '关于我们'
+
+contact:
+  bread: '/contact/'
+  BREAD: '联系我们'
+
+location:
+  bread: '/location/'
+  BREAD: '人员定位'

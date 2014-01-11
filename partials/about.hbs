@@ -5,9 +5,9 @@
     <em>GPS NEWS</em>
   </div>
   <ul class="sidemenu_body png">
-    {{#eachIndex config.news.types}}
+    {{#eachIndex configs.news.types}}
       {{#if item}}
-        <li><a{{#is ../../type item}} class="sidemenu_current png"{{/is}} href="/news/{{item}}/">{{get ../../config.news.TYPES index}}</a></li>
+        <li><a{{#is ../../type item}} class="sidemenu_current png"{{/is}} href="/news/{{item}}/">{{get ../../configs.news.TYPES index}}</a></li>
       {{/if}}
     {{/eachIndex}}
   </ul>
@@ -19,9 +19,9 @@
     <em>GPS PRODUCTS</em>
   </div>
   <ul class="sidemenu_body png">
-    {{#eachIndex config.product.types}}
+    {{#eachIndex configs.product.types}}
       {{#if item}}
-        <li><a{{#is ../../type item}} class="sidemenu_current png"{{/is}} href="/product/{{item}}/">{{get ../../config.product.TYPES index}}</a></li>
+        <li><a{{#is ../../type item}} class="sidemenu_current png"{{/is}} href="/product/{{item}}/">{{get ../../configs.product.TYPES index}}</a></li>
       {{/if}}
     {{/eachIndex}}
   </ul>
@@ -43,9 +43,9 @@
     <em>GPS DOWNLOADS</em>
   </div>
   <ul class="sidemenu_body png">
-    {{#eachIndex config.download.types}}
+    {{#eachIndex configs.download.types}}
       {{#if item}}
-        <li><a{{#is ../../type item}} class="sidemenu_current png"{{/is}} href="/download/{{item}}/">{{get ../../config.download.TYPES index}}</a></li>
+        <li><a{{#is ../../type item}} class="sidemenu_current png"{{/is}} href="/download/{{item}}/">{{get ../../configs.download.TYPES index}}</a></li>
       {{/if}}
     {{/eachIndex}}
   </ul>

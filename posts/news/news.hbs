@@ -1,10 +1,10 @@
 ---
 layout: default.hbs
 nav: news
-permalink: "<%= config[nav].types.map(function(i){ return '/'+nav+'/' + (i ? i + '/' : ''); }).join('\\n') %>"
+permalink: "<%= configs[nav].types.map(function(i){ return '/'+nav+'/' + (i ? i + '/' : ''); }).join('\\n') %>"
 type: "<%= permalink.replace(new RegExp('^\/'+nav+'\/|\/$', 'g'), '') %>"
 counter: [ 0 ]
-title: "<%= ( name = config[nav].TYPES[config[nav].types.indexOf(permalink.replace(new RegExp('^\/'+nav+'\/|\/$', 'g'), ''))] ) ? name + '-' : ''  %>新闻中心"
+title: "<%= ( name = configs[nav].TYPES[configs[nav].types.indexOf(permalink.replace(new RegExp('^\/'+nav+'\/|\/$', 'g'), ''))] ) ? name + '-' : ''  %>新闻中心"
 ---
 <div class="main">
 <div class="maincontainer png fixed_width pos_center">

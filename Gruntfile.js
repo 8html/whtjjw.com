@@ -95,7 +95,7 @@ module.exports = function(grunt) {
         layout: 'default.hbs',
         production: false,
         data: [ 'posts/*.yml' ],
-        config: grunt.file.readYAML('config.yml')
+        configs: grunt.file.readYAML('configs/configs.yml')
       },
       news: {
         options: {
@@ -140,7 +140,7 @@ module.exports = function(grunt) {
       },
       static: {
         files: {
-          'site/': [ '*.hbs', 'pages/*.hbs' ]
+          'site/': [ 'pages/*.hbs' ]
         }
       }
     },
@@ -148,6 +148,11 @@ module.exports = function(grunt) {
       options: {
         livereload: true
       },
+      /* NOTE: DO NOT WATCH FILES IN WORKING DIRECTORY
+       * It may be a bug that tasks watching files in working
+       * directory will be executed when new directory creates,
+       * though this directory is not in the task's files option.
+       */
       css: {
         files: [ 'assets/css/*.less' ],
         tasks: [ 'clean:css', 'less' ]
@@ -160,11 +165,11 @@ module.exports = function(grunt) {
         files: [ 'Gruntfile.js' ]
       },
       reassemble: {
-        files: [ 'helpers/*', '*.yml', 'layouts/*', 'partials/*' ],
+        files: [ 'helpers/*', 'config/*', 'layouts/*', 'partials/*' ],
         tasks: [ 'assemble' ]
       },
       index: {
-        files: [ '*.hbs', 'pages/*.hbs' ],
+        files: [ 'pages/*.hbs' ],
         tasks: [ 'assemble:static' ]
       },
       news: {

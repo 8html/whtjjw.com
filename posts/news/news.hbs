@@ -23,7 +23,7 @@ counter: [ 0 ]
           </tr>
         </thead>
         <tbody>
-          {{#each pages}}
+          {{#eachReverse pages}}
           {{#isMarkdownFile src}}
           {{#contains ../data.type ../../type}}
           <tr>
@@ -34,7 +34,7 @@ counter: [ 0 ]
           </tr>
           {{/contains}}
           {{/isMarkdownFile}}
-          {{/each}}
+          {{/eachReverse}}
         </tbody>
       </table>
     </div>

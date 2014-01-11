@@ -13,28 +13,18 @@ counter: [ 0 ]
   <div class="twocol_r">
     <div class="context png">
       {{>bread}}
-      <table class="artlsttbl">
-        <thead>
-          <tr>
-            <th class="alth1">序号</th>
-            <th class="alth2">标题</th>
-            <th class="alth3">发表时间</th>
-            <th class="alth4">点击</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#eachProperty product}}
-          {{#contains value.data.type ../type}}
-          <tr>
-            <td>{{selfIncrementCounter ../../counter 0}}</td>
-            <td class="alttitle"><a href="{{value.filename}}">{{value.data.title}}</a></td>
-            <td>{{#if value.data.date}}{{formatDate value.data.date "%Y-%m-%d"}}{{else}}-{{/if}}</td>
-            <td>{{randomNumber 500 1000}}</td>
-          </tr>
-          {{/contains}}
-          {{/eachProperty}}
-        </tbody>
-      </table>
+      <div class="clear"></div>
+      <div class="prods">
+        {{#eachProperty product}}
+        {{#contains value.data.type ../type}}
+        <div class="prod">
+          <a href="{{value.filename}}"><img src="{{value.data.image}}" width="130" height="100" /></a>
+          <a href="{{value.filename}}">{{value.data.title}}</a><br />
+          {{value.data.description}}
+        </div>
+        {{/contains}}
+        {{/eachProperty}}
+      </div>
     </div>
   </div>
   <div class="clear"></div>

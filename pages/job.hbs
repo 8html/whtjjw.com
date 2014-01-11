@@ -22,14 +22,14 @@ counter: [ 0 ]
           </tr>
         </thead>
         <tbody>
-          {{#eachProperty job}}
+          {{#eachPropertyReverse job}}
           <tr>
             <td>{{selfIncrementCounter ../../counter 0}}</td>
             <td class="alttitle"><a href="{{value.filename}}">{{value.data.title}}</a></td>
             <td>{{#if value.data.date}}{{formatDate value.data.date "%Y-%m-%d"}}{{else}}-{{/if}}</td>
             <td>{{randomNumber 500 1000}}</td>
           </tr>
-          {{/eachProperty}}
+          {{/eachPropertyReverse}}
         </tbody>
       </table>
     </div>

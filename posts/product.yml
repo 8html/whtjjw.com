@@ -2,7 +2,11 @@
   data:
     title: 普通录像主机
     type: video
+    description: 顺德地区GPS生产厂家捷通数码所研发的普通录像主机采用嵌入式linux操作系统，消除了病毒的感染，更高稳定性，不能人为修改硬盘存储的数据。
+    image: http://www.jetone.cn/image-pro/id01401.jpg
   content: |
+
+    ![image](http://www.jetone.cn/image-pro/id01401.jpg)
 
     1.1 系统特点
 
@@ -89,7 +93,11 @@
   data:
     title: JT-M6
     type: gps
+    image: http://www.jetone.cn/image-pro/id00101.jpg
+    description: 广东地区GPS专业生产厂家捷通数码所研发的JT-M6有多样查询功能，能按需设置车辆信息，远程控制，向车载设备收发调度文本信息或扩展指令。
   content: |
+
+    ![image](http://www.jetone.cn/image-pro/id00101.jpg)
 
     详细简绍：
 

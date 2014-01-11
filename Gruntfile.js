@@ -19,7 +19,7 @@ module.exports = function(grunt) {
       js: [ 'site/assets/js/*.js' ],
       images: [ 'site/assets/images/**' ],
       site: [ 'site' ],
-      tmp: [ 'tmp' ]
+      tmp: [ 'tmp/*' ]
     },
     copy: {
       images: {

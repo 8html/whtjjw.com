@@ -23,4 +23,4 @@ this will build the website in production mode only.
 Developers
 ----------
 
-* caiguanhao &ltcaiguanhao@gmail.com&gt;
+* caiguanhao &lt;caiguanhao@gmail.com&gt;

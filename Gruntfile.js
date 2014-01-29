@@ -27,6 +27,18 @@ module.exports = function(grunt) {
         cwd: 'assets/images/',
         src: '**',
         dest: 'site/assets/images/'
+      },
+      images: {
+        expand: true,
+        src: 'images/**',
+        dest: 'site/'
+      },
+      static: {
+        expand: true,
+        cwd: 'static/',
+        src: '**',
+        dest: 'site/',
+        dot: true
       }
     },
     less: {
@@ -88,8 +100,8 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         pkg: '<%= pkg %>',
-        plugins: [ 'assemble-permalink', './helpers/posts_list.js' ],
-        helpers: [ 'handlebars-helper-prettify', 'helpers/index.js' ],
+        plugins: [ 'assemble-permalink', './plugins/*.js' ],
+        helpers: [ 'handlebars-helper-prettify', 'helpers/*.js' ],
         partials: [ 'partials/*.hbs' ],
         layoutdir: 'layouts',
         layout: 'default.hbs',
@@ -106,19 +118,19 @@ module.exports = function(grunt) {
         },
         files: { 'site/': [ 'posts/news/*.hbs', 'posts/news/**/*.md' ] }
       },
-      product: {
+      gps: {
         options: {
           layout: 'details.hbs',
-          pages: grunt.file.readYAML('posts/product.yml'),
-          nav: 'product'
+          pages: grunt.file.readYAML('posts/gps.yml'),
+          nav: 'gps'
         },
         files: { 'site/': [] }
       },
-      solution: {
+      solutions: {
         options: {
           layout: 'details.hbs',
-          pages: grunt.file.readYAML('posts/solution.yml'),
-          nav: 'solution'
+          pages: grunt.file.readYAML('posts/solutions.yml'),
+          nav: 'solutions'
         },
         files: { 'site/': [] }
       },
@@ -140,7 +152,12 @@ module.exports = function(grunt) {
       },
       static: {
         files: {
-          'site/': [ 'pages/*.hbs' ]
+          'site/': [ 'pages/*.hbs', 'pages/*.handlebars', '!pages/sitemap.handlebars' ]
+        }
+      },
+      final: {
+        files: {
+          'site/': [ 'pages/sitemap.handlebars' ]
         }
       }
     },
@@ -165,7 +182,7 @@ module.exports = function(grunt) {
         files: [ 'Gruntfile.js' ]
       },
       reassemble: {
-        files: [ 'helpers/*', 'config/*', 'layouts/*', 'partials/*' ],
+        files: [ 'helpers/*', 'plugins/*', 'config/*', 'layouts/*', 'partials/*', 'pages/*.handlebars' ],
         tasks: [ 'assemble' ]
       },
       index: {
@@ -180,17 +197,17 @@ module.exports = function(grunt) {
         files: [ 'posts/download.yml' ],
         tasks: [ 'assemble:download' ]
       },
-      product: {
-        files: [ 'posts/product.yml' ],
-        tasks: [ 'assemble:product' ]
+      gps: {
+        files: [ 'posts/gps.yml' ],
+        tasks: [ 'assemble:gps' ]
       },
       job: {
         files: [ 'posts/job.yml' ],
         tasks: [ 'assemble:job' ]
       },
-      solution: {
-        files: [ 'posts/solution.yml' ],
-        tasks: [ 'assemble:solution' ]
+      solutions: {
+        files: [ 'posts/solutions.yml' ],
+        tasks: [ 'assemble:solutions' ]
       },
       images: {
         files: [ 'assets/images/**' ],
@@ -213,8 +230,10 @@ module.exports = function(grunt) {
   grunt.registerTask('assemble_in_production', '', function() {
     grunt.config('assemble.options.production', true);
     var pkg = grunt.config('assemble.options.pkg');
-    pkg.url = pkg.production_url;
-    grunt.config('assemble.options.pkg', pkg);
+    if (pkg.use_production_url) {
+      pkg.url = pkg.production_url;
+      grunt.config('assemble.options.pkg', pkg);
+    }
     grunt.log.ok('Entered production mode.');
   });
   grunt.registerTask('common', [ 'clean', 'less', 'uglify', 'concat', 'clean:tmp', 'copy' ]);

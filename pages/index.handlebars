@@ -1,0 +1,91 @@
+---
+permalink: /
+---
+<div class="main">
+<div class="fixed_width pos_center">
+  <div class="intro png pos_center">
+    <div id="animwave"></div>
+    <div id="animatedglobe"><div id="agcontainer"><div class="staticglobe png"></div></div></div>
+    <div class="sats png"></div>
+    <div class="introbtn btn1"><a href="{{ pkg.url }}/download/pro/"><img alt="广东GPS" class="png" src="/images/template/pro.png" width="100" height="98" /></a></div>
+    <div class="introbtn btn2"><a href="{{ pkg.url }}/solutions/"><img alt="佛山GPS" class="png" src="/images/template/solutions.png" width="120" height="83" /></a></div>
+    <div class="introbtn btn3"><a href="{{ pkg.url }}/location/"><img alt="顺德GPS" class="png" src="/images/template/location.png" width="100" height="146" /></a></div>
+    <div class="introbtn btn4"><a href="{{ pkg.url }}/vehicle/"><img alt="广州GPS" class="png" src="/images/template/vehicle.png" width="140" height="112" /></a></div>
+  </div>
+<script>
+swfobject.embedSWF("/images/template/wave.swf","animwave","200","200","9.0.0","/images/template/expressInstall.swf",null,{wmode:"transparent",menu:"false"});swfobject.embedSWF("/images/template/8htmlglobe.swf","agcontainer","250","250","9.0.0","/images/template/expressInstall.swf",null,{wmode:"transparent",menu:"false"});$(".introbtn").hover(function(){$(this).animate({left:"-=10",top:"-=10"},100);$(this).find("img").animate({height:"+=20",width:"+=20"},100)},function(){$(this).animate({left:"+=10",top:"+=10"},100);$(this).find("img").animate({height:"-=20",width:"-=20"},100)});
+</script>
+  <div class="threecols">
+    <div id="hmtabpg" class="threecols_1">
+      <ul class="tabpages">
+        <li><a class="tabpage_tab_cur" href="#tab-n1">GPS新闻</a></li>
+        <li><a class="tabpage_tab" href="#tab-n2">公司新闻</a></li>
+      </ul>
+      <div class="tabpage" id="tab-n1">
+        <ul class="newstablist">
+          {{#each posts_list.news}}
+          {{#is type "industry"}}
+          <li>
+            <em>{{formatDate date '%m-%d'}}</em>
+            <a href="{{permalink}}" title="{{title}}">
+              <em class="nbul new1"></em>{{title}}
+            </a>
+          </li>
+          {{/is}}
+          {{/each}}
+        </ul>
+      </div>
+      <div class="tabpage" id="tab-n2">
+        <ul class="newstablist">
+          {{#each posts_list.news}}
+          {{#is type "enterprise"}}
+          <li>
+            <em>{{formatDate date '%m-%d'}}</em>
+            <a href="{{permalink}}" title="{{title}}">
+              <em class="nbul new1"></em>{{title}}
+            </a>
+          </li>
+          {{/is}}
+          {{/each}}
+        </ul>
+      </div>
+<script>
+$("#hmtabpg .tabpage:not(:first)").addClass("hidden");$("#hmtabpg .tabpages").find(".tabpage_tab, .tabpage_tab_cur").hover(function(){$("#hmtabpg .tabpages .tabpage_tab_cur").removeClass("tabpage_tab_cur").addClass("tabpage_tab");$(this).removeClass("tabpage_tab").addClass("tabpage_tab_cur");$("#hmtabpg .tabpage").addClass("hidden");$($(this).attr("href")).removeClass("hidden")}).click(function(a){a.preventDefault()});
+</script>
+    </div>
+    <div id="hmpicpan" class="threecols_2">
+      <div class="picpanel">
+        <div class="picpanel_title"></div>
+        <div class="picpanel_selectors"></div>
+        <div class="pppage" id="ppp-p1" data-title="3G车载终端系列">
+          <a class="ppimglink" href="{{ pkg.url }}/gps/video/">3G车载终端系列</a>
+          <div>
+            <h5>3G车载终端系列</h5> <a href="{{ pkg.url }}/gps/video/" class="more">更多</a>
+            <div class="clear"></div>
+            <b>产品功能</b>：定位、通话、短信息调度、遇劫报警、超速报警、电子围栏、里程统计、监听、主电源低压报警、实时图像回传、硬盘图像存储。
+          </div>
+        </div>
+        <div class="pppage" id="ppp-p2" data-title="行驶记录仪系列">
+          <a class="ppimglink" href="{{ pkg.url }}/gps/extend/">行驶记录仪系列</a>
+          <div>
+            <h5>卫星定位行驶记录仪系列</h5> <a href="{{ pkg.url }}/gps/extend/" class="more">更多</a>
+            <div class="clear"></div>
+            <b>产品功能</b>GPRS或CDMA通讯。远程监控、远程监听、紧急求救、断油电、轨迹回放、事故疑点数据提取、数据打印、图像抓拍、里程统计、疲劳驾驶报警等。
+          </div>
+        </div>
+      </div>
+<script>
+$("#hmpicpan .picpanel_selectors").empty().append('<ul class="picpanel_list"></ul>');$("#hmpicpan .pppage:not(:first)").addClass("hidden");$("#hmpicpan .pppage").each(function(a,b){0==a&&$("#hmpicpan .picpanel_title").html($(b).attr("data-title"));$("#hmpicpan .picpanel_list").append('<li><a class="picpanel_tab'+(0==a?"_cur":"")+'" href="#'+$(b).attr("id")+'">0'+(a+1)+"</a></li>")});
+$("#hmpicpan .picpanel_selectors").find(".picpanel_tab, .picpanel_tab_cur").hover(function(){$("#hmpicpan .picpanel_selectors .picpanel_tab_cur").removeClass("picpanel_tab_cur").addClass("picpanel_tab");$(this).removeClass("picpanel_tab").addClass("picpanel_tab_cur");$("#hmpicpan .pppage").addClass("hidden");$($(this).attr("href").replace(/^(.*)#/,"#")).removeClass("hidden");$("#hmpicpan .picpanel_title").html($($(this).attr("href").replace(/^(.*)#/,"#")).attr("data-title"))}).click(function(a){a.preventDefault()});
+</script>
+    </div>
+    <div class="threecols_3">
+      <div class="map">
+        <div class="maptext"><a href="{{ pkg.url }}/vehicle/">网上查车</a></div>
+        <div class="maplink"><a href="{{ pkg.url }}/vehicle/">网上查车</a></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+</div>

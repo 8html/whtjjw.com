@@ -1,0 +1,9 @@
+RewriteEngine on
+
+# non-www redirects to www
+RewriteCond %{http_host} ^jetone.cn [nc]
+RewriteRule ^(.*)$ http://www.jetone.cn/$1 [L,R=301]
+
+# redirect index.html to its folder
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ http://www.jetone.cn/$1 [R=301,L]

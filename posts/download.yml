@@ -1,26 +1,341 @@
-- filename: "/download/download-01.html"
+- filename: "/download/gps-client.html"
   data:
     title: 客户端下载
-    date: 2013-12-12
-    type: client
+    keywords: 客户端下载
+    description: 客户端下载。
+    date: 2013-06-07
+    type: web
   content: |
 
     下载：[mapclient46933_net.exe](http://pan.baidu.com/share/link?shareid=1064854771&uk=2971623868)
 
-    GPS车辆监控管理系统的基本用途有：车辆实时定位、车辆监视控制、车辆调度管理、车辆报警处置、
-    车辆物流管理、网上查车服务、手机查车服务、短信查车服务等。 系统适用于城市、地区、以及全国
-    联网使用，适用于政府、集团、企事业单位以至私家车辆用户使用。它能监控车辆违章行驶、提升车辆的
-    防盗抢能力、提高车辆营运效率， 增加车辆营运经济效益，促进我国车辆管理现代化、信息化、智能化建设。
+    GPS车辆监控管理系统的基本用途有：车辆实时定位、车辆监视控制、车辆调度管理、车辆报警处置、车辆物流管理、网上查车服务、手机查车服务、短信查车服务等。 系统适用于城市、地区、以及全国联网使用，适用于政府、集团、企事业单位以至私家车辆用户使用。它能监控车辆违章行驶、提升车辆的防盗抢能力、提高车辆营运效率， 增加车辆营运经济效益，促进我国车辆管理现代化、信息化、智能化建设。
 
-    系统的服务对象可为：出租车辆、公交车辆、各种工程车辆、混凝土搅拌车辆、物流配送车辆、
-    冷藏车辆、信贷车辆、租赁车辆、消防车辆、急救车辆、边防车辆、押钞车辆、危险品运输车辆等。
+    系统的服务对象可为：出租车辆、公交车辆、各种工程车辆、混凝土搅拌车辆、物流配送车辆、冷藏车辆、信贷车辆、租赁车辆、消防车辆、急救车辆、边防车辆、押钞车辆、危险品运输车辆等。
 
 
-- filename: "/download/download-02.html"
+- filename: "/download/android-search-vehicles.html"
   data:
-    title: 专业版客户端winxp系统
-    date: 2013-12-12
+    title: Android(安卓)手机查车
+    keywords: Android(安卓)手机查车
+    description: Android(安卓)手机查车。
+    date: 2013-04-12
+    type: web
+  content: |
+
+    手机查车安卓(Android)版V1.2.2使用说明
+
+    版本要求:Android2.1或2.1以上
+
+    车辆监控：可以在地图上显示所有车辆及已选车辆的分组，位置、速度、油量、OBD参数、时间、状态等信息；可以对车辆进行轨迹回放。
+
+    意见回馈：欢迎您提出宝贵的意见。
+
+    分享：分享功能，可以通过几种方式把我们的手机查车软件进行分享。
+
+    一、如何下载，安装安卓版手机查车
+
+    [>>下载手机查车Android版V1.2.4](http://pan.baidu.com/s/1vaB1u)
+
+    登录[www.jetone.cn](http://www.jetone.cn)-----软件下载----网络版--选择[Android(安卓)手机查车](http://www.jetone.cn/download/android-search-vehicles.html)进行下载 ，下载安装包安装到手机即可 ，安装成功，手机界面出现如下图标，如图1
+
+    ![Android(安卓)手机查车图1]({{ pkg.url }}/images/download/android-search-vehicles-01.jpg)
+
+    图1
+
+    二、如何登录手机查车
+
+    在手机界面点击“手机查车”进入用户登录界面，在这里可以选择企业用户登录和个人用户登录
+
+    企业用户登录：使用跟电脑上一样的用户名、密码登录
+
+    个人用户登录：使用车牌号码登录，密码一般默认为6个0
+
+    1.1企业用户登录
+
+    选择服务器所在的省---选择服务器IP地址（如图2）选择: 广东省056
+
+    ![Android(安卓)手机查车图2]({{ pkg.url }}/images/download/android-search-vehicles-02.jpg)
+
+    图2
+
+    输入用户名、密码，如图3
+
+    ![Android(安卓)手机查车图3]({{ pkg.url }}/images/download/android-search-vehicles-03.jpg)
+
+    图3
+
+    点击“登录”进入“应用程序”主界面（如图4）
+
+    ![Android(安卓)手机查车图4]({{ pkg.url }}/images/download/android-search-vehicles-04.jpg)
+
+    图4
+
+    1.2个人用户登录
+
+    选择服务器列表，输入车牌号码、密码（如图5）
+
+    ![Android(安卓)手机查车图5]({{ pkg.url }}/images/download/android-search-vehicles-05.jpg)
+
+    图5
+
+    点击“登录”，地图上显示车辆的所在位置（如图6）
+
+    ![Android(安卓)手机查车图6]({{ pkg.url }}/images/download/android-search-vehicles-06.jpg)
+
+    图6
+
+    三、如何使用车辆监控
+
+    在“应用程序”界面中选择“车辆监控”（如图7）
+
+    ![Android(安卓)手机查车图7]({{ pkg.url }}/images/download/android-search-vehicles-07.jpg)
+
+    图7
+
+    1.车辆监控界面如何设置（图8）
+
+    ![Android(安卓)手机查车图8]({{ pkg.url }}/images/download/android-search-vehicles-08.jpg)
+
+    图8
+
+    在“车辆监控”界面 “设置”，对车辆监控界面进行设置，有高德地图和WEB地图以及地图模式：普通视图跟卫星视图可供选择，定位间隔可以自己进行设置，（如图9）
+
+    ![Android(安卓)手机查车图9]({{ pkg.url }}/images/download/android-search-vehicles-09.jpg)
+
+    图9
+
+    2.车辆如何轨迹回放
+
+    在“车辆监控” — “全部车辆” 界面中点击车牌号码“粤Y06XXX”，弹出选择框，选择“轨迹回放”（如图10）
+
+    ![Android(安卓)手机查车图10]({{ pkg.url }}/images/download/android-search-vehicles-10.jpg)
+
+    图10
+
+    点击“轨迹回放”，在“参数设置”的界面中，选择回放所需要的地图以及要回放的时间段（如图11）
+
+    ![Android(安卓)手机查车图11]({{ pkg.url }}/images/download/android-search-vehicles-11.jpg)
+
+    图11
+
+    点击“回放”按钮，则回放出对应时间段该车辆的轨迹数据（如图12）
+
+    ![Android(安卓)手机查车图12]({{ pkg.url }}/images/download/android-search-vehicles-12.jpg)
+
+    图12
+
+    在地图上车辆图标处点击“详细信息”，可查看车辆详细信息（如图13）
+
+    ![Android(安卓)手机查车图13]({{ pkg.url }}/images/download/android-search-vehicles-13.jpg)
+
+    图13
+
+    在地图上车辆图标处点击“详细信息”，可查看车辆详细信息如速度、油量、当日里程以及OBD参数等等（如图14）
+
+    ![Android(安卓)手机查车图14]({{ pkg.url }}/images/download/android-search-vehicles-14.jpg)
+
+    图14
+
+    “详细信息”“OBD参数”即可查看当前车辆的OBD参数，如下图（如图15）
+
+    ![Android(安卓)手机查车图15]({{ pkg.url }}/images/download/android-search-vehicles-15.jpg)
+
+    图15
+
+
+- filename: "/download/iphone-search-vehicles.html"
+  data:
+    title: IPhone版手机查车
+    keywords: IPhone版手机查车
+    description: IPhone版手机查车。
+    date: 2013-04-19
+    type: web
+  content: |
+
+    手机查车iPhone版V1.2使用说明
+
+    手机查车iPhone版V1.2由车辆监控、和意见反馈二个功能模块组成。
+
+    车辆监控：可以在地图上显示所有车辆及已选车辆的分组，位置、速度、时间、状态等信息，显示全部标注及已选标注的信息。可以对车辆进行轨迹回放。
+
+    意见反馈：您有任何意见或建议都可以通过意见反馈功能反馈给我们。
+
+    分享：分享功能，可以通过几种方式把我们的手机查车软件进行分享。
+
+    一、如何从苹果商店下载安装手机查车程序
+
+    1.点击APP Store进入苹果应用商店：
+
+    ![IPhone版手机查车图1]({{ pkg.url }}/images/download/iphone-search-vehicles-01.jpg)
+
+    图1
+
+    2.在搜索框中输入：exlive进行搜索
+
+    ![IPhone版手机查车图2]({{ pkg.url }}/images/download/iphone-search-vehicles-02.jpg)
+
+    图2
+
+    搜索结果中选择“手机查车”软件，点击“安装”即可安装
+
+    ![IPhone版手机查车图3]({{ pkg.url }}/images/download/iphone-search-vehicles-03.jpg)
+
+    图3
+
+    安装成功后出现如下图的“手机查车”图标
+
+    ![IPhone版手机查车图4]({{ pkg.url }}/images/download/iphone-search-vehicles-04.jpg)
+
+    图4
+
+    二、如何使用车辆监控
+
+    1.在手机界面中。点击“手机查车”图标（如图），进入用户登录界面：（在这里可以选择企业用户登录和个人用户登录）
+
+    企业用户登录：使用跟电脑上一样的用户名、密码登录（如下图）
+
+    个人用户登录：使用车牌号码登录
+
+    下面以企业用户登录进行说明，选择服务器列表、输入用户名、密码
+
+    ![IPhone版手机查车图5]({{ pkg.url }}/images/download/iphone-search-vehicles-05.jpg)
+
+    图5
+
+    点击服务器选项时会出现如下图界面，先选择服务器所在的省，然后在选择服务器IP地址广东056
+
+    ![IPhone版手机查车图6]({{ pkg.url }}/images/download/iphone-search-vehicles-06.jpg)
+
+    图6
+
+    第一次登陆账号后，再次登陆时，不用输入账号，直接点击账号后面的小箭头，在账号管理界面就可以显示出以前登陆过的账号，点击想要登陆的账号即可
+
+    ![IPhone版手机查车图7]({{ pkg.url }}/images/download/iphone-search-vehicles-07.jpg)
+
+    图7
+
+    点击界面中“车辆监控”
+
+    ![IPhone版手机查车图8]({{ pkg.url }}/images/download/iphone-search-vehicles-08.jpg)
+
+    图8
+
+    1.车辆监控界面如何设置
+
+    ![IPhone版手机查车图9]({{ pkg.url }}/images/download/iphone-search-vehicles-09.jpg)
+
+    图9
+
+    在上图中点击 “设置”按钮，对车辆监控界面进行设置
+
+    ![IPhone版手机查车图10]({{ pkg.url }}/images/download/iphone-search-vehicles-10.jpg)
+
+    图10
+
+    2.车辆的详细位置
+
+    在“车辆监控” ---> “全部车辆” 界面中选择分组“私家车定位” 选择车辆“粤****”，点击返回地图界面，选中车辆在地图中显示
+
+
+    ![IPhone版手机查车图11]({{ pkg.url }}/images/download/iphone-search-vehicles-11.jpg)
+
+    图11
+
+    点击如上图所示的红色圈中“详细”按钮，查看车辆的详细位置信息，如下图：
+
+    ![IPhone版手机查车图12]({{ pkg.url }}/images/download/iphone-search-vehicles-12.jpg)
+
+    图12
+
+    车辆如何轨迹回放
+
+    在“车辆监控”---> “全部车辆” 界面中选择分组“私家车定位” 选择车辆“粤****”，
+
+    ![IPhone版手机查车图13]({{ pkg.url }}/images/download/iphone-search-vehicles-13.jpg)
+
+    图13
+
+    点击返回地图界面，点击要轨迹回放的车辆，点击轨迹回放
+
+    ![IPhone版手机查车图14]({{ pkg.url }}/images/download/iphone-search-vehicles-14.jpg)
+
+    图14
+
+    在“轨迹回放”的界面中，选择要回放的时间段，如下图：
+
+    ![IPhone版手机查车图15]({{ pkg.url }}/images/download/iphone-search-vehicles-15.jpg)
+
+    图15
+
+    选择时间段时候，点击“回放”，如下图：
+
+    ![IPhone版手机查车图16]({{ pkg.url }}/images/download/iphone-search-vehicles-16.jpg)
+
+    图16
+
+
+- filename: "/download/pro-android-search-vehicles.html"
+  data:
+    title: 专业版安卓手机查车
+    keywords: 专业版安卓手机查车
+    description: 软件目前只支持查看车辆位置和回放，其它功能在完善中。
+    date: 2013-02-12
     type: pro
   content: |
 
-    [专业版客户端winxp系统](http://pan.baidu.com/share/link?shareid=474781&uk=372671813)
+    软件目前只支持查看车辆位置和回放，其它功能在完善中.....[软件下载](http://pan.baidu.com/share/link?shareid=3752492067&uk=2971623868)
+
+    第一步，打开车辆监控程序
+
+    ![打开车辆监控程序]({{ pkg.url }}/images/download/pro-android-search-vehicles-01.jpg)
+
+    第二步，在系统设置填写服务器参数
+
+    ![在系统设置填写服务器参数]({{ pkg.url }}/images/download/pro-android-search-vehicles-02.jpg)
+
+    1．数据服务器参数设置并保存
+
+    ![数据服务器参数设置并保存]({{ pkg.url }}/images/download/pro-android-search-vehicles-02-1.jpg)
+
+    2．中心服务器参数设置并保存
+
+    ![中心服务器参数设置并保存]({{ pkg.url }}/images/download/pro-android-search-vehicles-02-2.jpg)
+
+    第三步，选择登陆用户
+
+    ![选择登陆用户]({{ pkg.url }}/images/download/pro-android-search-vehicles-03.jpg)
+
+    第四步，输入帐号跟密码
+
+    ![输入帐号跟密码]({{ pkg.url }}/images/download/pro-android-search-vehicles-04.jpg)
+
+    登陆成功
+
+    ![登陆成功]({{ pkg.url }}/images/download/pro-android-search-vehicles-05.jpg)
+
+
+
+- filename: "/download/pro-winxp.html"
+  data:
+    title: 专业版客户端winxp系统
+    keywords: 专业版客户端winxp系统
+    description: 专业版客户端winxp系统。
+    date: 2013-05-12
+    type: pro
+  content: |
+
+    [专业版客户端winxp系统下载](http://pan.baidu.com/share/link?shareid=474781&uk=372671813)
+
+
+- filename: "/download/pro-win7.html"
+  data:
+    title: 专业版客户端win7系统
+    keywords: 专业版客户端win7系统
+    description: 专业版客户端win7系统。
+    date: 2013-05-18
+    type: pro
+  content: |
+
+    [专业版客户端win7系统下载](http://pan.baidu.com/share/link?shareid=474477&uk=372671813)
+

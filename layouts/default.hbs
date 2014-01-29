@@ -7,10 +7,10 @@
 {{#prettify}}
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <title>{{#if title}}{{ title }}{{else}}{{ pkg.NAME }}{{/if}}-广州GPS,合肥GPS,广东GPS,佛山GPS,顺德GPS</title>
+  <title>{{#if title}}{{ title }}-{{ pkg.NAME }}{{else}}{{ pkg.NAME }}-{{ pkg.keywords }}{{/if}}</title>
   <meta name="viewport" content="width=1024" />
   <meta name="description" content="{{#if description}}{{ description }}{{else}}{{ pkg.description }}{{/if}}" />
-  <meta name="keywords" content="{{#if keywords}}{{ keywords }}{{else}}{{join pkg.keywords ', '}}{{/if}}" />
+  <meta name="keywords" content="{{#if keywords}}{{ keywords }}{{else}}{{join pkg.keywords ','}}{{/if}}" />
   <link rel="stylesheet" type="text/css" href="{{obj_val compiled_assets '/assets/css/application.css'}}">
   <script src="{{obj_val compiled_assets '/assets/js/application.js'}}"></script>
   {{#unless production}}<script src="http://localhost:35729/livereload.js"></script>{{/unless}}
@@ -18,7 +18,7 @@
 <body>
   <div id="wrapper">
     <div id="header" class="fixed_width pos_center">
-      <div id="logo"><a class="png" href="{{ pkg.url }}/" title="佛山市顺德区捷通数码科技有限公司">佛山市顺德区捷通数码科技有限公司</a></div>
+      <div id="logo"><a class="png" href="{{ pkg.url }}/" title="武汉天健军卫网络技术开发有限公司">武汉天健军卫网络技术开发有限公司</a></div>
       <ul id="menu">
         <li class="menu_start"></li>
         <li class="menu_item">
@@ -30,11 +30,11 @@
         </li>
         <li class="menu_sep"></li>
         <li class="menu_item">
-          <a{{#is nav 'product'}} class="menu_item_current"{{/is}} href="{{ pkg.url }}/product/" data-id="4" title="GPS产品展示">GPS产品展示</a>
+          <a{{#is nav 'gps'}} class="menu_item_current"{{/is}} href="{{ pkg.url }}/gps/" data-id="4" title="GPS产品展示">GPS产品展示</a>
         </li>
         <li class="menu_sep"></li>
         <li class="menu_item">
-          <a{{#is nav 'solution'}} class="menu_item_current"{{/is}} href="{{ pkg.url }}/solution/" title="GPS解决方案">GPS解决方案</a>
+          <a{{#is nav 'solutions'}} class="menu_item_current"{{/is}} href="{{ pkg.url }}/solutions/" title="GPS解决方案">GPS解决方案</a>
         </li>
         <li class="menu_sep"></li>
         <li class="menu_item">
@@ -55,14 +55,14 @@
       </ul>
       <ul id="menu_sub_4" class="submenu hidden">
         <li class="menu_sub_start"></li>
-        <li class="menu_sub_item"><a href="{{ pkg.url }}/product/video/" title="视频监控产品">视频监控产品</a></li>
+        <li class="menu_sub_item"><a href="{{ pkg.url }}/gps/video/" title="视频监控产品">视频监控产品</a></li>
         <li class="menu_sub_sep"></li>
-        <li class="menu_sub_item"><a href="{{ pkg.url }}/product/gps/" title="GPS监控产品">GPS监控产品</a></li>
+        <li class="menu_sub_item"><a href="{{ pkg.url }}/gps/extend/" title="GPS监控产品">GPS监控产品</a></li>
         <li class="menu_sub_end"></li>
       </ul>
       <ul id="menu_sub_9" class="submenu hidden">
         <li class="menu_sub_start"></li>
-        <li class="menu_sub_item"><a href="{{ pkg.url }}/download/client/" title="GPS网络版">GPS网络版</a></li>
+        <li class="menu_sub_item"><a href="{{ pkg.url }}/download/web/" title="GPS网络版">GPS网络版</a></li>
         <li class="menu_sub_sep"></li>
         <li class="menu_sub_item"><a href="{{ pkg.url }}/download/pro/" title="GPS专业版">GPS专业版</a></li>
         <li class="menu_sub_end"></li>
@@ -77,15 +77,11 @@
     </div>
     {{>body}}
     <div id="footer" class="fixed_width pos_center">
-      <div id="footer_logo"><a class="png" href="{{ pkg.url }}/" title="佛山市顺德区捷通数码科技有限公司">佛山市顺德区捷通数码科技有限公司</a></div>
+      <div id="footer_logo"><a class="png" href="{{ pkg.url }}/" title="武汉天健军卫网络技术开发有限公司">武汉天健军卫网络技术开发有限公司</a></div>
       <div id="footer_text">
-        版权所有 &copy; 2006-2012 佛山市顺德区捷通数码科技有限公司 | <a href="http://www.miibeian.gov.cn/">粤ICP备11032956号-2</a><br />
-        地址：佛山市顺德区大良105国道飞马路口翔业楼2楼 (<a href="{{ pkg.url }}/contact/">查看地图</a>) | 全国服务热线：400-833-6110 <br />
-        销售：+86-0757-22228768 | 客服：+86-0757-22229110 | 技术：+86-0757-22236110</br>
-        网站建设维护与优化:<a href="http://www.8html.com/">8HTML</a> | <a href="{{ pkg.url }}/" >广东GPS</a>|<a href="{{ pkg.url }}/" >广州GPS</a>|<a href="{{ pkg.url }}/" >佛山GPS</a>|<a href="{{ pkg.url }}/" >顺德GPS</a>|<a href="{{ pkg.url }}/" >合肥GPS</a>|<a href="{{ pkg.url }}/Sitemap.xml" target="_blank">Sitemap</a>
-      </div>
-      <div id="footer_lang">
-        English Version
+        &copy; 2006-2014 武汉天健军卫网络技术开发有限公司 | 地址：湖北省武汉市洪山区张家湾60号 (<a href="{{ pkg.url }}/contact/">查看地图</a>)<br />
+        电话：+86-027-87507288 | 传真：+86-027-87507299
+        网站建设维护与优化:<a href="http://www.8html.com/">8HTML</a> | <a href="{{ pkg.url }}/Sitemap.xml" target="_blank">Sitemap</a>
       </div>
     </div>
     {{#if production}}
@@ -98,39 +94,16 @@
             客户咨询时间<br />08:30—17:30
           </div>
           <div class="zxkfpanel_c_2">
-            技术一：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=448644548&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:448644548:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a><br />
-            技术二：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=342547915&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:342547915:41 &r=0.06579961165141396" alt="点击这里给我发消息" title="点击这里给我发消息"></a><br />
-            技术三：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1535659850&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1535659850:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a><br />
-            销售一：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=448644548&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:448644548:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a><br />
-            客服一：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1072527985&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1072527985:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a><br />
-            客服二：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1719548932&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1719548932:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>
+            客服一：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2865861616&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2865861616:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a><br />
+            客服二：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2098018335&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2098018335:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>
           </div>
         </div>
         <div class="zxkfpanel_f"></div>
       </div>
     </div>
-    <div class="dianhua" style="top:500px">
-      <div class="dianhua1"></div>
-      <div class="dianhual">
-        <div class="dianhual_h"></div>
-        <div class="dianhual_c1">
-          <div class="dianhual_c_2">
-          </div>
-        </div>
-        <div class="dianhual_f"></div>
-      </div>
-    </div>
-    <!-- Baidu Button BEGIN -->
-    <script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=1&amp;pos=right&amp;uid=373180" ></script>
-    <script type="text/javascript" id="bdshell_js"></script>
-    <script type="text/javascript">
-    var bds_config={"bdTop":1};
-    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
-    </script>
-    <!-- Baidu Button END -->
     <script type="text/javascript">
     var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F117a0fdd12db1d47f8e3164769fa1bcd' type='text/javascript'%3E%3C/script%3E"));
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff4999dd524c1df5c928e6d656358cbb1' type='text/javascript'%3E%3C/script%3E"));
     </script>
     {{/if}}
   </div>

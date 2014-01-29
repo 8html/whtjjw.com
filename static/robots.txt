@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /images/
+Disallow: /logreport/
+Disallow: /favicon.ico
+Disallow: /baidu_verify_7QNnv8qGLI.html
+
+Sitemap: http://www.jetone.cn/Sitemap.xml
